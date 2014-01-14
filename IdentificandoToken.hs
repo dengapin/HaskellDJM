@@ -1,3 +1,9 @@
+
+import Text.ParserCombinators.Parsec
+import Text.Parsec
+import Text.Parsec.String
+
+
 import System.IO
 import Data.Char(toUpper)
 import Data.List
@@ -25,28 +31,47 @@ main = do
 --funcion que recoge una linea de codigo 
 limpiador respuesta [] = return ()
 limpiador respuesta (x:xs) = do 
-	let nuevo = split (oneOf ";{[+#:%&*}]") x 
+	let nuevo = splitOneOf("=<>/;{[+#:%&*}]\\\"") x 
 	printMe respuesta nuevo
 	limpiador respuesta xs
+	
 printMe respuesta [] = return ()   
 printMe respuesta (x:xs) = do	
 			if x == "" then return ()
 			else 
-				if isInfixOf "<?" x then do
-						let sentencia = "Cabecera," ++ x ++"\n"
+				if isInfixOf "id_device" x then do
+						let sentencia = "Device," ++ x ++"\n"
 						putStrLn sentencia
 						appendFile respuesta sentencia
 						printMe respuesta xs
-				else if isInfixOf "<" x then do
-						let sentencia = "TagOpen," ++ x ++"\n"
+				else if isInfixOf "user_agent" x then do
+						let sentencia = "Device," ++ x ++"\n"
 						putStrLn sentencia
 						appendFile respuesta sentencia
 						printMe respuesta xs
-				else if isInfixOf ">" x then do
-						let sentencia = "TagClose," ++ x ++"\n"
+				else if isInfixOf "fallback" x then do
+						let sentencia = "Device," ++ x ++"\n"
+						putStrLn sentencia
+						appendFile respuesta sentencia
+						printMe respuesta xs
+				else if isInfixOf "id" x then do
+						let sentencia = "Group," ++ x ++"\n"
+						putStrLn sentencia
+						appendFile respuesta sentencia
+						printMe respuesta xs
+				else if isInfixOf "name" x then do
+						let sentencia = "Capability," ++ x ++"\n"
+						putStrLn sentencia
+						appendFile respuesta sentencia
+						printMe respuesta xs
+				else if isInfixOf "value" x then do
+						let sentencia = "Capability," ++ x ++"\n"
 						putStrLn sentencia
 						appendFile respuesta sentencia
 						printMe respuesta xs
 				else do
 						let sentencia = "Expresion, " ++ x ++ "\n"
 						appendFile respuesta sentencia
+						
+
+		   			  

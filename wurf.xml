@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wurfl>
   <devices>
-    <device id_device="browser_ucweb_release_5_1" user_agent="DO_NOT_MATCH_BROWSER_UCWEB_5" fall_back="browser_root">
+    <device id="browser_ucweb_release_5_1" user_agent="DO_NOT_MATCH_BROWSER_UCWEB_5" fall_back="browser_root">
     <group id="product_info">
       <capability name="mobile_browser" value="UCWeb"/>
       <capability name="mobile_browser_version" value="5.1"/>
@@ -22,4 +21,3 @@
     </group>
   </device>
 </devices>
-</wurfl>

@@ -1,0 +1,87 @@
+Expresion, version
+Expresion, encoding
+Group,id
+Device,user_agent
+Expresion, fall_back
+Group,id
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Group,id
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Expresion, name
+Expresion, value
+Group,id
+Expresion, name
+Expresion, value
+Group,id
+Expresion, name
+Expresion, value
+Expresion, version
+Expresion, encoding
+Group,id
+Device,user_agent
+Expresion, fall_back
+Group,id
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
+Expresion, version
+Expresion, encoding
+Device,id_device
+Device,user_agent
+Expresion, fall_back
+Group,id
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
+Group,id
+Capability,name
+Capability,value
