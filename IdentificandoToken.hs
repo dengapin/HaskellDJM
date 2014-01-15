@@ -16,7 +16,7 @@ getWords path = do contents <- readFile path
 {-Funcion Main del Proyecto-}
 main = do 
 {-Funcion getWord recoge un archivo y retorna IOSTRING []-}
-	palabras <- getWords "ejemplo.xml"
+	palabras <- getWords "pruebawurf.xml"
 --Metodo putStrLn se encuentra dentro del System.IO y dado un dato lo muestra en pantalla
 	putStrLn "Proyecto de Lenguajes de Programacion"
 	putStrLn "Integrantes: "
@@ -35,6 +35,28 @@ limpiador respuesta (x:xs) = do
 	printMe respuesta nuevo
 	limpiador respuesta xs
 	
+---------tags del documento identificados
+data Device = Device { id_device :: String, 
+                       user_agent :: String, 
+                       fall_back :: String
+                     } deriving (Eq,Show,Read)
+                                         
+data Group = Group { id_group :: String
+                   } deriving (Eq,Show,Read)
+
+data Capability = Capability { name :: String,
+                               value :: String
+                             } deriving (Eq,Show,Read)
+	
+type Atributo = (String,String)
+	
+	
+imprimirTag :: Device -> String
+imprimirTag(Device id user fall)="***DEVICE*** "++"\n"++id++" Atributo:User_Agent: "++user++"Atributo:Fall_Back: "++fall
+		   			  
+
+
+------Funcion guarda un documento text aparte y muestra por pantalla el resultado
 printMe respuesta [] = return ()   
 printMe respuesta (x:xs) = do	
 			if x == " " then return()
@@ -135,4 +157,7 @@ printMe respuesta (x:xs) = do
 						appendFile respuesta sentencia
 						printMe respuesta xs
 
-		   			  
+						
+
+		
+	
