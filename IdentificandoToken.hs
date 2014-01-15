@@ -1,4 +1,3 @@
-
 import Text.ParserCombinators.Parsec
 import Text.Parsec
 import Text.Parsec.String
@@ -16,7 +15,7 @@ getWords path = do contents <- readFile path
 {-Funcion Main del Proyecto-}
 main = do 
 {-Funcion getWord recoge un archivo y retorna IOSTRING []-}
-	palabras <- getWords "pruebawurf.xml"
+	palabras <- getWords "ejemplo.xml"
 --Metodo putStrLn se encuentra dentro del System.IO y dado un dato lo muestra en pantalla
 	putStrLn "Proyecto de Lenguajes de Programacion"
 	putStrLn "Integrantes: "
